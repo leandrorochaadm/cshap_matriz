@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class ex1
+public class test2
 {
 	static public void Ex1()
     {
@@ -12,6 +12,7 @@ public class ex1
         int colunas = int.Parse(Console.ReadLine());
 
         int[,] Matriz1 = new int[linhas, colunas];
+        //int[,] Matriz2 = new int[linhas, colunas];
 
         for (int i = 0; i < linhas; i++)
         {
@@ -31,8 +32,25 @@ public class ex1
         {
             for (int j = 0; j < colunas; j++)
             {
-                Console.WriteLine($"Matriz [{i + 1}, {j + 1}] = {Matriz1[i, j]}");
+                Console.WriteLine($"Matriz1 [{i + 1}, {j + 1}] = {Matriz1[i, j]}");
+                
             }
         }
+
+        Console.WriteLine("---> Verificando maior e menor valor <---");
+        int maior = int.MinValue;
+        int menor = int.MaxValue;
+        for (int i = 0; i < linhas; i++)
+        {
+            for (int j = 0; j < colunas; j++)
+            {
+                //Console.WriteLine($"Matriz2 [{i + 1}, {j + 1}] = {Matriz1[i, j]}");
+             if(maior < Matriz1[i, j]) { maior = Matriz1[i, j]; }
+             if (menor > Matriz1[i, j]) { menor = Matriz1[i, j]; }
+            }
+        }
+
+        Console.WriteLine($"Menor: {menor}");
+        Console.WriteLine($"Maior: {maior}");
     }
 }

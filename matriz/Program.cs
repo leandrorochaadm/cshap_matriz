@@ -6,8 +6,8 @@ namespace matriz
     {
         static void Main(string[] args)
         {
-            ex1 ex1 = new ex1();
-            ex1.Ex1();
+            test2 test2 = new test2();
+            test2.Ex1();
 
         }
 
