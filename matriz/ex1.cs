@@ -23,37 +23,49 @@ public class Ex1
             //verificando se existe numero antes de inserir
 
             gera_numero_aleatorio:
-                num = r.Next(-350,350)  ;
+                num = r.Next(-350, 350);
 
-                    foreach (var item in Matriz1)
+                foreach (var item in Matriz1)
+                {
+                    if (item == num)
                     {
-                        if (item == num)
-                        {
-                            goto gera_numero_aleatorio;
-                        }
-
-
+                        goto gera_numero_aleatorio;
                     }
+                }
 
-
-                    Matriz1[i, j] = num;
-                    Console.WriteLine($"Matriz[{i+1}, {j+1}]: {Matriz1[i, j]}");
-            
-              
-                
+                Matriz1[i, j] = num;
+                Console.WriteLine($"Matriz[{i + 1}, {j + 1}]: {Matriz1[i, j]}");
             }
 
         }
 
-        // exibindo elementos 
-        /*
-      for (int i = 0; i < linhas; i++)
+        Console.WriteLine("-------------------------------");
+        bool encontrou = false;
+        String posicao="";
+        Console.Write("Qual numero deseja pesquisar? ");
+        int pesq = int.Parse(Console.ReadLine());
+        
+
+        for (int i = 0; i < linhas; i++)
         {
             for (int j = 0; j < colunas; j++)
             {
-                Console.WriteLine($"Matriz [{i + 1}, {j + 1}] = {Matriz1[i, j]}");
+                if (Matriz1[i, j] == pesq)
+                {
+                    encontrou = true;
+                    posicao = $"posição Matriz[{i + 1}, {j + 1}]";
+                }
+
+
             }
         }
-        */
+
+        if (encontrou) {
+            Console.WriteLine($"Esse numero está na {posicao}");
+        }
+        else
+        {
+            Console.WriteLine("Número não encontrado");
+        }
     }
 }
