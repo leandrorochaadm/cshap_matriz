@@ -6,8 +6,11 @@ namespace matriz
     {
         static void Main(string[] args)
         {
-            test2 test2 = new test2();
-            test2.Ex1();
+            Console.WriteLine("Acadêmico: Leandro Rocha de Brito");
+
+            Ex1 ex1 = new Ex1();
+            ex1.Main();
+            
 
         }
 
