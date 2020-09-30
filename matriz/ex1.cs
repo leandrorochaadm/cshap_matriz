@@ -53,10 +53,8 @@ public class Ex1
                 if (Matriz1[i, j] == pesq)
                 {
                     encontrou = true;
-                    posicao = $"posição Matriz[{i + 1}, {j + 1}]";
+                    posicao = $"posição: linha {i + 1}, coluna {j + 1}";
                 }
-
-
             }
         }
 
