@@ -5,7 +5,7 @@ namespace matriz
     class Program
     {
         private const byte exercInicial = 1;
-        private const byte exercFinal = 10;
+        private const byte exercFinal = 2;
 
         static void Main(string[] args)
         {
@@ -13,8 +13,8 @@ namespace matriz
             Console.WriteLine("Desenvolvido por: Leandro Rocha de Brito");
 
             var exerc1 = new Ex1();
-         /*   var exerc2 = new Exerc2();
-            var exerc3 = new Exerc3();
+            var exerc2 = new Ex2();
+         /*   var exerc3 = new Exerc3();
             var exerc4 = new Exerc4();
             var exerc5 = new Exerc5();
             var exerc6 = new Exerc6();
@@ -26,14 +26,14 @@ namespace matriz
 
             do
             {
-                System.Console.WriteLine($"\nDigite o número do exercicio que desejar entre {exercInicial} a {exercFinal}, ou número 0 pra sair");
+                System.Console.WriteLine($"\n\n Digite o número do exercicio que desejar entre {exercInicial} a {exercFinal}, ou número 0 pra sair");
                 _opition = Convert.ToByte(System.Console.ReadLine());
                 System.Console.WriteLine($"Você escolheu o exercício {_opition}:");
                 switch (_opition)
                 {
                     case 1: exerc1.Main(); break;
-                   /* case 2: exerc2.exe(); break;
-                    case 3: exerc3.exe(); break;
+                    case 2: exerc2.Main(); break;
+                   /* case 3: exerc3.exe(); break;
                     case 4: exerc4.exe(); break;
                     case 5: exerc5.exe(); break;
                     case 6: exerc6.exe(); break;
